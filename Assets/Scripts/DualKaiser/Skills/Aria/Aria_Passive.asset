@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e704e24ce05d649538cc73519b53f9e9, type: 3}
+  m_Name: Aria_Passive
+  m_EditorClassIdentifier: 
+  passiveSkillName: 
+  skillDescription: If Aria has any active stacks of Burn, she gains a 15% ATK bonus
+    and 10% CRIT RATE
+  monitoredDot: {fileID: 11400000, guid: d6097db75e447431080653c7faf87151, type: 2}
+  skillEffects:
+  - {fileID: 11400000, guid: fd8286f8cdb8e4caf94a37b1220475e0, type: 2}
+  - {fileID: 11400000, guid: deaa3423f03fb4f1a915d22388620dd6, type: 2}
