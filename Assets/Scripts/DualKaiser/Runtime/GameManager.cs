@@ -36,11 +36,15 @@ namespace DualKaiser
         public TMP_Text char1HUD;
         public TMP_Text char2HUD;
 
+        public GameObject char1Btns;
+        public GameObject char2Btns;
+
         public TMP_Text char1HPValue;
         public TMP_Text char2HPValue;
 
-        public TMP_Text char1DmgNo;
-        public TMP_Text char2DmgNo;
+        public TMP_Text damageText;
+
+        public TMP_Text skilName;
 
         public Slider hpslider1;
         public Slider hpslider2;
@@ -48,7 +52,6 @@ namespace DualKaiser
         public Slider amrslider2;
 
     
-
         void Start()
         {
             state = BattleState.START;
@@ -72,6 +75,10 @@ namespace DualKaiser
             char1HPValue.text = m_char1.currentHP.ToString();
             char2HPValue.text = m_char2.currentHP.ToString();
 
+            // Hide Buttons
+            char1Btns.SetActive(false);
+            char2Btns.SetActive(false);
+
             //Get list of skills
 
             /*Debug.Log(char1Stats.charName + " " + "Loaded");
@@ -87,6 +94,84 @@ namespace DualKaiser
 
             Char1Turn();
         }
+
+        public void Char1Turn()
+        {
+            C2HideButtons();
+
+            m_char1.CheckStatuses();
+
+            C1ShowButtons();
+        }
+
+        public void Char2Turn()
+        {
+            C1HideButtons();
+
+            m_char2.CheckStatuses();
+
+            C2ShowButtons();
+        }
+
+        // Button Methods
+
+        public void C1OSButton()
+        {
+            if (state != BattleState.C1ACTION)
+                return;
+
+            m_char1.ActivateS1(m_char2);
+
+            UpdateHealthBar();
+
+            state = BattleState.C2ACTION;
+
+            Char2Turn();
+        }
+
+        public void C1DSButton()
+        {
+            if (state != BattleState.C1ACTION)
+                return;
+
+            m_char1.ActivateS1(m_char2);
+
+            UpdateHealthBar();
+
+            state = BattleState.C2ACTION;
+
+            Char2Turn();
+        }
+
+        public void C2OSButton()
+        {
+            if (state != BattleState.C2ACTION)
+                return;
+
+            m_char2.ActivateS1(m_char1);
+
+            UpdateHealthBar();
+
+            state = BattleState.C1ACTION;
+
+            Char1Turn();
+        }
+
+        public void C2DSButton()
+        {
+            if (state != BattleState.C2ACTION)
+                return;
+
+            m_char2.ActivateS1(m_char1);
+
+            UpdateHealthBar();
+
+            state = BattleState.C1ACTION;
+
+            Char1Turn();
+        }
+
+        // UI Update Methods
 
         public void SetMaxHealth()
         {
@@ -117,24 +202,24 @@ namespace DualKaiser
             char2HPValue.text = m_char2.currentHP.ToString();
         }
 
-        public void Char1Turn()
+        public void C1ShowButtons()
         {
-            
+            char1Btns.SetActive(true);
         }
 
-        public void C1S1AttackButton()
+        public void C1HideButtons()
         {
-            if (state != BattleState.C1ACTION)
-                return;
-
-            m_char1.ActivateS1(m_char2);
-
-            UpdateHealthBar();
+            char1Btns.SetActive(false);
         }
 
-        public void C1S2AtackButton()
+        public void C2ShowButtons()
         {
-            m_char2.CheckStatuses();
+            char2Btns.SetActive(true);
+        }
+
+        public void C2HideButtons()
+        {
+            char2Btns.SetActive(false);
         }
     }
 }

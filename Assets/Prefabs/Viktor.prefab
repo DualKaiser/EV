@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ccd08ddebc503470fac1093c8dce2ac8, type: 3}
       insertIndex: -1
       addedObject: {fileID: -8876593102327941717}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ccd08ddebc503470fac1093c8dce2ac8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1978665707119964899}
   m_SourcePrefab: {fileID: 100100000, guid: ccd08ddebc503470fac1093c8dce2ac8, type: 3}
 --- !u!1 &800211571923874942 stripped
 GameObject:
@@ -85,9 +88,10 @@ MonoBehaviour:
   currentCritR: 0
   currentCritDmg: 0
   currentAMR: 0
-  offensiveSkill: {fileID: 0}
-  defensiveSkill: {fileID: 0}
-  ultimate: {fileID: 0}
+  passiveSkill: {fileID: 0}
+  offensiveSkill: {fileID: 11400000, guid: d4114ace0e39f46838bc641cbcf16937, type: 2}
+  defensiveSkill: {fileID: 11400000, guid: e53bd6bb2c5d94c27818227685db4351, type: 2}
+  ultimate: {fileID: 11400000, guid: 312a1549b59bb4ebcabeb04284e31c02, type: 2}
   activeBuffs: []
   activeDebuffs: []
   activeDots: []
@@ -97,3 +101,24 @@ MonoBehaviour:
   originalAMR: 0
   originalCritR: 0
   originalCritDmg: 0
+--- !u!95 &1978665707119964899
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800211571923874942}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51980d6fed6e24a598e72c154b30b371, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

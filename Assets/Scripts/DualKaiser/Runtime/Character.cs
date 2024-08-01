@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using static UnityEngine.GraphicsBuffer;
 
 namespace DualKaiser
@@ -41,6 +42,8 @@ namespace DualKaiser
 
         [Header("Active DOTs")]
         public List<ActiveDot> activeDots = new List<ActiveDot>();
+
+        public TMP_Text skilName;
 
         // Original Stats
         [HideInInspector]
