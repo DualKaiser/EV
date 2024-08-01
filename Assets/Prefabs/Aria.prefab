@@ -88,6 +88,7 @@ MonoBehaviour:
   currentCritR: 0
   currentCritDmg: 0
   currentAMR: 0
+  passiveSkill: {fileID: 0}
   offensiveSkill: {fileID: 11400000, guid: d4114ace0e39f46838bc641cbcf16937, type: 2}
   defensiveSkill: {fileID: 11400000, guid: e53bd6bb2c5d94c27818227685db4351, type: 2}
   ultimate: {fileID: 11400000, guid: 312a1549b59bb4ebcabeb04284e31c02, type: 2}
@@ -109,7 +110,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097427292898269536}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 118bb2501a813426eba14e60bf7ed2de, type: 3}
+  m_Avatar: {fileID: 9000000, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
   m_Controller: {fileID: 9100000, guid: d08d5f903b7db4c8986e5751845c7109, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
